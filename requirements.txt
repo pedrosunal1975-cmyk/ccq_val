@@ -1,0 +1,29 @@
+# CCQ Validator Dependencies
+# Python 3.10+
+
+# Core dependencies
+python-dotenv==1.0.0         # Environment configuration
+pydantic==2.5.0              # Data validation
+
+# Database
+SQLAlchemy==2.0.23           # Database ORM
+psycopg2-binary==2.9.9       # PostgreSQL adapter
+alembic==1.13.0              # Database migrations
+
+# XBRL/XML Processing
+lxml==5.1.0                  # XML parsing for XBRL files
+
+# Testing
+pytest==7.4.3                # Testing framework
+pytest-asyncio==0.21.1       # Async test support
+pytest-cov==4.1.0            # Coverage reporting
+pytest-mock==3.12.0          # Mocking utilities
+
+# Development
+black==23.12.0               # Code formatting
+flake8==6.1.0                # Linting
+mypy==1.7.1                  # Type checking
+isort==5.13.0                # Import sorting
+
+# Utilities
+typing-extensions==4.9.0    # Type hints backport
