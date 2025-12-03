@@ -1,0 +1,93 @@
+# File: engines/ccq_mapper/analysis/success_constants.py
+
+"""
+Success Calculation Constants
+==============================
+
+Constants and thresholds for success metric calculations.
+
+Purpose:
+- Define success thresholds
+- Define confidence levels
+- Define quality benchmarks
+- Define recommendation prefixes
+"""
+
+# Success thresholds (0-1 scale)
+EXCELLENT_THRESHOLD = 0.95  # 95%
+GOOD_THRESHOLD = 0.90       # 90%
+ACCEPTABLE_THRESHOLD = 0.80 # 80%
+POOR_THRESHOLD = 0.70       # 70%
+
+# Confidence thresholds (0-1 scale)
+HIGH_CONFIDENCE_THRESHOLD = 0.85
+MEDIUM_CONFIDENCE_THRESHOLD = 0.70
+LOW_CONFIDENCE_THRESHOLD = 0.50
+
+# Quality thresholds (0-100 scale)
+HIGH_QUALITY_SCORE = 85.0
+ACCEPTABLE_QUALITY_SCORE = 70.0
+
+# Success levels
+SUCCESS_LEVEL_EXCELLENT = 'EXCELLENT'
+SUCCESS_LEVEL_GOOD = 'GOOD'
+SUCCESS_LEVEL_ACCEPTABLE = 'ACCEPTABLE'
+SUCCESS_LEVEL_POOR = 'POOR'
+SUCCESS_LEVEL_FAILURE = 'FAILURE'
+
+# Recommendation prefixes
+PREFIX_SUCCESS = "[SUCCESS]"
+PREFIX_INFO = "[INFO]"
+PREFIX_WARNING = "[WARNING]"
+PREFIX_ERROR = "[ERROR]"
+PREFIX_ACTION = "[ACTION]"
+
+# Scoring weights (must sum to 1.0)
+WEIGHT_CLASSIFICATION = 0.30  # 30%
+WEIGHT_CONFIDENCE = 0.25      # 25%
+WEIGHT_CLUSTERING = 0.15      # 15%
+WEIGHT_STATEMENT = 0.15       # 15%
+WEIGHT_NULL_QUALITY = 0.10    # 10%
+# Remaining 5% reserved for penalties/bonuses
+
+# Duplicate penalties (points deducted from 0-100 score)
+CRITICAL_DUPLICATE_PENALTY = 20.0
+MAJOR_DUPLICATE_PENALTY = 5.0
+
+# Minimum thresholds for components
+MIN_CLASSIFICATION_COMPLETENESS = 80.0
+MIN_CONFIDENCE_SCORE = 0.70
+MIN_NULL_QUALITY_SCORE = 70.0
+
+
+__all__ = [
+    'EXCELLENT_THRESHOLD',
+    'GOOD_THRESHOLD',
+    'ACCEPTABLE_THRESHOLD',
+    'POOR_THRESHOLD',
+    'HIGH_CONFIDENCE_THRESHOLD',
+    'MEDIUM_CONFIDENCE_THRESHOLD',
+    'LOW_CONFIDENCE_THRESHOLD',
+    'HIGH_QUALITY_SCORE',
+    'ACCEPTABLE_QUALITY_SCORE',
+    'SUCCESS_LEVEL_EXCELLENT',
+    'SUCCESS_LEVEL_GOOD',
+    'SUCCESS_LEVEL_ACCEPTABLE',
+    'SUCCESS_LEVEL_POOR',
+    'SUCCESS_LEVEL_FAILURE',
+    'PREFIX_SUCCESS',
+    'PREFIX_INFO',
+    'PREFIX_WARNING',
+    'PREFIX_ERROR',
+    'PREFIX_ACTION',
+    'WEIGHT_CLASSIFICATION',
+    'WEIGHT_CONFIDENCE',
+    'WEIGHT_CLUSTERING',
+    'WEIGHT_STATEMENT',
+    'WEIGHT_NULL_QUALITY',
+    'CRITICAL_DUPLICATE_PENALTY',
+    'MAJOR_DUPLICATE_PENALTY',
+    'MIN_CLASSIFICATION_COMPLETENESS',
+    'MIN_CONFIDENCE_SCORE',
+    'MIN_NULL_QUALITY_SCORE',
+]
